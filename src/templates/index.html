@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploader une Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 1.1em;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 400px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 200px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 1em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenue !</h1>
+        <p>Choisis une image et laisse-nous créer une histoire inspirée par elle.</p>
+        
+        <!-- Formulaire d'upload d'image -->
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="img">Sélectionner une image :</label>
+            <input type="file" id="img" name="img" accept="image/*" required>
+            <input type="submit" value="Envoyer l'image">
+        </form>
+        
+        <div class="footer">
+            <p>Une fois l'image téléchargée, une histoire sera générée à partir de celle-ci. Bonne chance !</p>
+        </div>
+    </div>
+</body>
+</html>
