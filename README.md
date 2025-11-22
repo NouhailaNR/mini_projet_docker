@@ -4,21 +4,22 @@ Ce mini_projet utilise Flask pour créer une application web qui permet aux util
 
 ## 1- la structure de projet 
 
+```text
 src/
-│── app.py
-│── templates/
-│    ├── index.html
-│    └── gallery.html
-│── static/
-│    ├── uploads/ 
-|       ├── image.png
+├── app.py
+├── templates/
+│   ├── index.html
+│   └── gallery.html
+├── static/
+│   └── uploads/
+│       ├── image.png
 │       └── image2.png
-│
 docker-compose.yml
 README.md
 requirements.txt
 Dockerfile
 .gitignore
+
 
 ## 2- les missions 
 
@@ -31,7 +32,8 @@ Dockerfile
 
 ## 4- lancer le projet et aussi relancer le programme apres une modification 
 
-`docker-compose up --build`
+`docker-compose up --build` \\
+
     Cela va :
     - Construire les images Docker (Flask, Ollama…)
     - Lancer les conteneurs
